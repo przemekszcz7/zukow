@@ -1,0 +1,6 @@
+{
+  "name": "Siedlisko Żuków",
+  "description": "Klimatyczny imprezowy dom eventowy na 3-hektarowej działce z sauną, jacuzzi i ruską banią w Żukowie koło Mokobód.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

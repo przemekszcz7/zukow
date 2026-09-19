@@ -1,0 +1,1442 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+    <title>Siedlisko Żuków | Imprezowy Dom Eventowy - Sauna, Jacuzzi, 3ha Działki</title>
+    <meta name="description" content="Klimatyczny imprezowy dom eventowy na 3-hektarowej działce z sauną, jacuzzi pod gwiazdami i ruską banią w Żukowie koło Mokobód. Panieńskie, kawalerskie, urodziny i weekendy." />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="https://i.ibb.co/0TSSWhX/770761243-122103355497434760-5720882374382434321-n.jpg" />
+    
+    <!-- Preconnect & DNS-Prefetch for Speed -->
+    <link rel="preconnect" href="https://i.ibb.co" crossorigin />
+    <link rel="dns-prefetch" href="https://i.ibb.co" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="image" href="https://i.ibb.co/R4MhXzdG/796853526-122112368889434760-1704221418688455572-n.jpg" fetchpriority="high" />
+
+    <!-- Open Graph / SEO -->
+    <meta property="og:title" content="Siedlisko Żuków | Imprezowy Dom Eventowy" />
+    <meta property="og:description" content="Sauna, jacuzzi i w pełni wyposażony dom na 3-hektarowej działce. Idealne miejsce na panieński, kawalerski i imprezy ze znajomymi." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://i.ibb.co/R4MhXzdG/796853526-122112368889434760-1704221418688455572-n.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Fonts with swap display -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet" />
+
+    <style>
+      /* --- RESET & DESIGN VARIABLES --- */
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        min-width: 0;
+      }
+
+      :root {
+        --bg-void: #06080d;
+        --bg-main: #0a0d15;
+        --bg-surface: #101420;
+        --bg-surface-elevated: #151a2a;
+        --border-subtle: rgba(212, 175, 55, 0.16);
+        --border-gold: rgba(212, 175, 55, 0.42);
+        --gold-light: #fef08a;
+        --gold-primary: #d4af37;
+        --gold-dark: #854d0e;
+        --text-pure: #ffffff;
+        --text-primary: #f1f5f9;
+        --text-secondary: #cbd5e1;
+        --text-muted: #94a3b8;
+        --font-serif: 'Cinzel', Georgia, serif;
+        --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        --header-height: 80px;
+        --radius-lg: 18px;
+        --radius-md: 12px;
+        --shadow-card: 0 12px 30px -8px rgba(0, 0, 0, 0.55);
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: var(--header-height);
+        background-color: var(--bg-void);
+        color: var(--text-primary);
+        font-family: var(--font-sans);
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+      }
+
+      @supports not (overflow-x: clip) {
+        html {
+          overflow-x: hidden;
+        }
+      }
+
+      body {
+        background-color: var(--bg-void);
+        min-height: 100vh;
+        width: 100%;
+        max-width: 100%;
+        overflow-x: clip;
+        position: relative;
+      }
+
+      @supports not (overflow-x: clip) {
+        body {
+          overflow-x: hidden;
+        }
+      }
+
+      /* Fixed hardware-accelerated background - Prevents heavy mobile scroll lag */
+      body::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background: 
+          radial-gradient(ellipse 80% 50% at 50% 0%, rgba(67, 56, 202, 0.15) 0%, transparent 70%),
+          radial-gradient(circle 500px at 100% 40%, rgba(212, 175, 55, 0.04) 0%, transparent 60%);
+        transform: translateZ(0);
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+      /* --- TYPOGRAPHY --- */
+      .section-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--gold-light);
+        background: rgba(212, 175, 55, 0.12);
+        border: 1px solid var(--border-gold);
+        padding: 6px 16px;
+        border-radius: 9999px;
+        margin-bottom: 16px;
+      }
+
+      .section-title {
+        font-family: var(--font-serif);
+        font-size: clamp(26px, 4vw, 42px);
+        font-weight: 700;
+        color: var(--text-pure);
+        line-height: 1.25;
+        margin-bottom: 16px;
+      }
+
+      .section-title span {
+        color: var(--gold-primary);
+      }
+
+      .section-desc {
+        font-size: clamp(15px, 1.8vw, 18px);
+        color: var(--text-secondary);
+        max-width: 760px;
+        line-height: 1.7;
+      }
+
+      .center-header {
+        text-align: center;
+        margin-bottom: 46px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* --- BUTTONS & CTAs --- */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-weight: 600;
+        font-size: 15px;
+        padding: 13px 26px;
+        border-radius: 9999px;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        text-align: center;
+        white-space: nowrap;
+        border: 1px solid transparent;
+        text-decoration: none;
+      }
+
+      .btn-gold {
+        background: linear-gradient(135deg, #f5c842 0%, #d4af37 100%);
+        color: #08090f;
+        box-shadow: 0 4px 16px rgba(212, 175, 55, 0.3);
+        font-weight: 700;
+      }
+
+      .btn-gold:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 22px rgba(212, 175, 55, 0.45);
+        background: linear-gradient(135deg, #fef08a 0%, #d4af37 100%);
+      }
+
+      .btn-night {
+        background: rgba(22, 28, 45, 0.8);
+        color: var(--text-pure);
+        border: 1px solid rgba(212, 175, 55, 0.35);
+      }
+
+      .btn-night:hover {
+        background: rgba(30, 27, 75, 0.95);
+        border-color: var(--gold-primary);
+        transform: translateY(-2px);
+        color: var(--gold-light);
+      }
+
+      /* --- STICKY NAVIGATION --- */
+      .site-header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        background: rgba(6, 8, 13, 0.92);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border-subtle);
+      }
+
+      .nav-inner {
+        height: var(--header-height);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .site-logo {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .logo-icon-wrap {
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 2px solid var(--gold-primary);
+        box-shadow: 0 0 10px rgba(212, 175, 55, 0.35);
+        flex-shrink: 0;
+      }
+
+      .logo-icon-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .logo-text {
+        font-family: var(--font-serif);
+        font-size: 21px;
+        font-weight: 800;
+        letter-spacing: 0.03em;
+        color: var(--text-pure);
+        white-space: nowrap;
+      }
+
+      .logo-text span {
+        color: var(--gold-primary);
+      }
+
+      .nav-menu {
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        list-style: none;
+      }
+
+      .nav-link {
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--text-secondary);
+        transition: color 0.2s ease;
+        padding: 6px 0;
+      }
+
+      .nav-link:hover {
+        color: var(--gold-light);
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .phone-quicklink {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--gold-primary);
+        padding: 8px 16px;
+        border-radius: 9999px;
+        background: rgba(212, 175, 55, 0.08);
+        border: 1px solid rgba(212, 175, 55, 0.25);
+        transition: background 0.2s ease, border-color 0.2s ease;
+      }
+
+      .phone-quicklink:hover {
+        background: rgba(212, 175, 55, 0.2);
+        color: #fff;
+        border-color: var(--gold-primary);
+      }
+
+      .nav-toggle-input {
+        display: none;
+      }
+
+      .nav-toggle-label {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        cursor: pointer;
+        z-index: 1001;
+      }
+
+      .nav-toggle-label span,
+      .nav-toggle-label::before,
+      .nav-toggle-label::after {
+        content: '';
+        display: block;
+        width: 22px;
+        height: 2px;
+        background-color: var(--gold-light);
+        border-radius: 2px;
+        transition: transform 0.25s ease, opacity 0.25s ease;
+      }
+
+      /* --- HERO SECTION --- */
+      .hero-section {
+        position: relative;
+        min-height: calc(100vh - var(--header-height));
+        display: flex;
+        align-items: center;
+        padding: 70px 0 90px;
+        background-image: url('https://i.ibb.co/R4MhXzdG/796853526-122112368889434760-1704221418688455572-n.jpg');
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+      }
+
+      .hero-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(6, 8, 13, 0.8) 0%,
+          rgba(20, 16, 48, 0.85) 50%,
+          rgba(6, 8, 13, 0.98) 100%
+        );
+        z-index: 1;
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        max-width: 840px;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--gold-light);
+        background: rgba(30, 27, 75, 0.85);
+        border: 1px solid var(--border-gold);
+        padding: 7px 18px;
+        border-radius: 9999px;
+        margin-bottom: 22px;
+      }
+
+      .hero-title {
+        font-family: var(--font-serif);
+        font-size: clamp(34px, 6vw, 68px);
+        font-weight: 800;
+        line-height: 1.12;
+        color: var(--text-pure);
+        margin-bottom: 18px;
+        text-shadow: 0 4px 18px rgba(0, 0, 0, 0.7);
+      }
+
+      .hero-title .highlight {
+        color: var(--gold-primary);
+      }
+
+      .hero-subtitle {
+        font-size: clamp(17px, 2vw, 23px);
+        font-weight: 400;
+        color: #e2e8f0;
+        line-height: 1.5;
+        margin-bottom: 32px;
+        max-width: 720px;
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+      }
+
+      .hero-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 36px;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 14px;
+        color: var(--text-secondary);
+        background: rgba(16, 20, 32, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 6px 14px;
+        border-radius: 9999px;
+      }
+
+      .pill svg {
+        color: var(--gold-primary);
+        flex-shrink: 0;
+      }
+
+      .hero-cta-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        align-items: center;
+      }
+
+      /* --- SECTIONS & CARDS --- */
+      .section-py {
+        padding: 85px 0;
+        position: relative;
+      }
+
+      .section-divider {
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--border-gold), transparent);
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+      }
+
+      .cards-grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+
+      .feature-card {
+        background: linear-gradient(180deg, rgba(22, 28, 45, 0.65) 0%, rgba(14, 17, 26, 0.85) 100%);
+        border: 1px solid var(--border-subtle);
+        border-radius: var(--radius-lg);
+        padding: 30px 24px;
+        transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+      }
+
+      .feature-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--border-gold);
+        box-shadow: var(--shadow-card);
+      }
+
+      .card-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: var(--radius-md);
+        background: rgba(30, 27, 75, 0.8);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gold-primary);
+        margin-bottom: 18px;
+        transition: background 0.2s ease, color 0.2s ease;
+      }
+
+      .feature-card:hover .card-icon {
+        background: var(--gold-primary);
+        color: #08090f;
+      }
+
+      .card-title {
+        font-family: var(--font-serif);
+        font-size: 19px;
+        font-weight: 700;
+        color: var(--text-pure);
+        margin-bottom: 10px;
+      }
+
+      .card-text {
+        font-size: 15px;
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+
+      /* --- STORY BOX --- */
+      .event-story-box {
+        background: linear-gradient(135deg, rgba(30, 27, 75, 0.45) 0%, rgba(16, 20, 32, 0.9) 100%);
+        border: 1px solid var(--border-gold);
+        border-radius: var(--radius-lg);
+        padding: 42px;
+        box-shadow: var(--shadow-card);
+        margin-bottom: 36px;
+      }
+
+      .story-quote {
+        font-size: clamp(17px, 2.2vw, 21px);
+        line-height: 1.7;
+        color: var(--text-pure);
+        margin-bottom: 24px;
+      }
+
+      .story-quote strong {
+        color: var(--gold-light);
+        font-weight: 600;
+      }
+
+      .chips-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 28px;
+      }
+
+      .event-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 14px;
+        font-weight: 500;
+        color: var(--gold-light);
+        background: rgba(212, 175, 55, 0.1);
+        border: 1px solid rgba(212, 175, 55, 0.28);
+        padding: 7px 16px;
+        border-radius: 9999px;
+      }
+
+      /* --- DISCOUNT CARD --- */
+      .discount-card {
+        background: linear-gradient(135deg, rgba(22, 28, 48, 0.95) 0%, rgba(30, 27, 75, 0.9) 100%);
+        border: 2px solid var(--gold-primary);
+        border-radius: var(--radius-lg);
+        padding: 40px;
+        box-shadow: var(--shadow-card);
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 32px;
+      }
+
+      .discount-badge-lg {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: linear-gradient(135deg, #f5c842 0%, #d4af37 100%);
+        color: #08090f;
+        font-weight: 800;
+        font-size: 14px;
+        padding: 6px 16px;
+        border-radius: 9999px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin-bottom: 14px;
+      }
+
+      .discount-text {
+        font-size: clamp(16px, 1.9vw, 19px);
+        color: #f1f5f9;
+        line-height: 1.7;
+        margin-bottom: 18px;
+      }
+
+      .discount-highlight-price {
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        font-family: var(--font-serif);
+        font-size: clamp(26px, 3.2vw, 38px);
+        font-weight: 800;
+        color: var(--gold-light);
+      }
+
+      .discount-highlight-price small {
+        font-family: var(--font-sans);
+        font-size: 15px;
+        font-weight: 500;
+        color: var(--text-secondary);
+      }
+
+      /* --- GALLERY SECTION (CLEAN PHOTOS ONLY, HOVER ZOOM) --- */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .gallery-item {
+        position: relative;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 1px solid var(--border-subtle);
+        background: var(--bg-surface);
+        aspect-ratio: 16 / 10;
+        box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+        transform: translateZ(0);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transform: scale(1);
+        transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        will-change: transform;
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.06);
+      }
+
+      /* --- CONTACT & MAP --- */
+      .contact-grid {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 36px;
+        align-items: stretch;
+      }
+
+      .contact-info-panel {
+        background: linear-gradient(180deg, rgba(22, 28, 45, 0.8) 0%, rgba(14, 17, 26, 0.95) 100%);
+        border: 1px solid var(--border-gold);
+        border-radius: var(--radius-lg);
+        padding: 36px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 26px;
+        box-shadow: var(--shadow-card);
+      }
+
+      .contact-methods {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .contact-card-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 14px 16px;
+        border-radius: var(--radius-md);
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(212, 175, 55, 0.15);
+        transition: background 0.2s ease, border-color 0.2s ease;
+      }
+
+      .contact-card-item:hover {
+        background: rgba(30, 27, 75, 0.5);
+        border-color: var(--gold-primary);
+      }
+
+      .contact-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: rgba(30, 27, 75, 0.85);
+        border: 1px solid rgba(212, 175, 55, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--gold-primary);
+        flex-shrink: 0;
+      }
+
+      .contact-label {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--text-muted);
+        margin-bottom: 2px;
+      }
+
+      .contact-val {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--text-pure);
+        word-break: break-word;
+        overflow-wrap: break-word;
+      }
+
+      .contact-val a:hover {
+        color: var(--gold-light);
+        text-decoration: underline;
+      }
+
+      .map-container {
+        position: relative;
+        width: 100%;
+        max-width: 100%;
+        min-height: 440px;
+        height: 100%;
+        border-radius: var(--radius-lg);
+        overflow: hidden;
+        border: 1px solid var(--border-gold);
+        box-shadow: var(--shadow-card);
+        background: #111420;
+      }
+
+      .map-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 100% !important;
+        border: 0;
+      }
+
+      /* --- FOOTER --- */
+      .site-footer {
+        background: #040508;
+        border-top: 1px solid var(--border-subtle);
+        padding: 44px 0 28px;
+        margin-top: 50px;
+      }
+
+      .footer-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 22px;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        list-style: none;
+      }
+
+      .footer-links a {
+        font-size: 14px;
+        color: var(--text-muted);
+        transition: color 0.2s ease;
+      }
+
+      .footer-links a:hover {
+        color: var(--gold-light);
+      }
+
+      .footer-copy {
+        font-size: 14px;
+        color: var(--text-muted);
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        width: 100%;
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+      }
+
+      /* --- OPTIMIZED MOBILE & TABLET MEDIA QUERIES --- */
+      @media (max-width: 1024px) {
+        .cards-grid-4 {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .contact-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .map-container {
+          min-height: 380px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        :root {
+          --header-height: 68px;
+        }
+
+        /* Disable mobile blur overhead for silky-smooth 60fps scroll */
+        .site-header {
+          backdrop-filter: none;
+          -webkit-backdrop-filter: none;
+          background: #090c14;
+        }
+
+        .nav-toggle-label {
+          display: flex;
+        }
+
+        .nav-actions .phone-quicklink {
+          display: none;
+        }
+
+        .nav-menu {
+          position: fixed;
+          top: var(--header-height);
+          left: 0;
+          right: 0;
+          background: #0a0d16;
+          border-bottom: 1px solid var(--border-gold);
+          flex-direction: column;
+          padding: 28px 20px;
+          gap: 18px;
+          transform: translateY(-115%);
+          opacity: 0;
+          pointer-events: none;
+          transition: transform 0.25s ease, opacity 0.25s ease;
+          box-shadow: 0 16px 36px rgba(0, 0, 0, 0.8);
+          backdrop-filter: none;
+          -webkit-backdrop-filter: none;
+        }
+
+        .nav-toggle-input:checked ~ .nav-menu {
+          transform: translateY(0);
+          opacity: 1;
+          pointer-events: auto;
+        }
+
+        .nav-toggle-input:checked ~ .nav-actions .nav-toggle-label span {
+          opacity: 0;
+        }
+
+        .nav-toggle-input:checked ~ .nav-actions .nav-toggle-label::before {
+          transform: translateY(7px) rotate(45deg);
+        }
+
+        .nav-toggle-input:checked ~ .nav-actions .nav-toggle-label::after {
+          transform: translateY(-7px) rotate(-45deg);
+        }
+
+        .nav-link {
+          font-size: 17px;
+          width: 100%;
+          text-align: center;
+          padding: 6px 0;
+        }
+
+        .hero-section {
+          padding: 50px 0 70px;
+          min-height: auto;
+        }
+
+        .hero-cta-group {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .hero-cta-group .btn {
+          width: 100%;
+        }
+
+        .event-story-box {
+          padding: 26px 18px;
+        }
+
+        .discount-card {
+          grid-template-columns: 1fr;
+          padding: 26px 18px;
+          gap: 22px;
+        }
+
+        .discount-action-col {
+          width: 100%;
+        }
+
+        .discount-action-col .btn {
+          width: 100%;
+        }
+
+        .gallery-grid {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        .cards-grid-4 {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        .contact-info-panel {
+          padding: 22px 16px;
+        }
+
+        .map-container {
+          min-height: 320px;
+        }
+
+        .footer-copy {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- 1. HEADER / STICKY NAV -->
+    <header class="site-header" id="header-glow">
+      <div class="container nav-inner">
+        <!-- Logo -->
+        <a href="#hero" class="site-logo" id="logo-link">
+          <div class="logo-icon-wrap">
+            <img 
+              src="https://i.ibb.co/0TSSWhX/770761243-122103355497434760-5720882374382434321-n.jpg" 
+              alt="Logo Siedlisko Żuków" 
+              width="42" 
+              height="42"
+              decoding="async" 
+            />
+          </div>
+          <span class="logo-text">Siedlisko <span>Żuków</span></span>
+        </a>
+
+        <!-- Pure CSS Hamburger Checkbox -->
+        <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-label="Przełącznik menu mobilnego" />
+
+        <!-- Navigation Menu -->
+        <nav class="nav-menu" id="primary-navigation">
+          <a href="#o-nas" class="nav-link" id="nav-o-nas">O nas</a>
+          <a href="#na-weekend" class="nav-link" id="nav-na-weekend">Na weekend</a>
+          <a href="#panienski-kawalerski" class="nav-link" id="nav-panienski">Panieński/Kawalerski</a>
+          <a href="#galeria" class="nav-link" id="nav-galeria">Galeria</a>
+          <a href="#kontakt" class="nav-link" id="nav-kontakt">Kontakt</a>
+        </nav>
+
+        <!-- Right Side Nav Actions -->
+        <div class="nav-actions">
+          <a href="tel:508651559" class="phone-quicklink" id="nav-quick-tel">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            508 651 559
+          </a>
+          <label for="nav-toggle" class="nav-toggle-label" aria-label="Otwórz menu" id="hamburger-button">
+            <span></span>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <!-- 2. HERO SECTION -->
+      <section class="hero-section" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span>★</span> Imprezowy Dom Eventowy & SPA
+            </div>
+            <h1 class="hero-title">
+              Siedlisko <span class="highlight">Żuków</span>
+            </h1>
+            <p class="hero-subtitle">
+              Sauna, jacuzzi i w pełni wyposażony dom na 3-hektarowej działce.
+            </p>
+
+            <div class="hero-pills">
+              <div class="pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                3 hektary prywatnej przestrzeni
+              </div>
+              <div class="pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                Jacuzzi pod gwiazdami
+              </div>
+              <div class="pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+                Gorąca sauna i bania ruska
+              </div>
+              <div class="pill">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"/></svg>
+                Ognisko na zewnątrz
+              </div>
+            </div>
+
+            <div class="hero-cta-group">
+              <a href="#kontakt" class="btn btn-gold" id="hero-cta-inquire">
+                📩 Zapytaj o dostępny termin
+              </a>
+              <a href="tel:508651559" class="btn btn-night" id="hero-cta-call">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                Zadzwoń: 508 651 559
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. PANIEŃSKI / WIECZÓR ZE ZNAJOMYMI -->
+      <section class="section-py" id="panienski-kawalerski">
+        <div class="container">
+          <div class="center-header">
+            <div class="section-badge">Niezapomniane noce</div>
+            <h2 class="section-title">Panieński / Wieczór <span>ze znajomymi</span></h2>
+            <p class="section-desc">Ekskluzywna przestrzeń i klimat, którego nie da się odtworzyć w żadnym zatłoczonym lokalu w mieście.</p>
+          </div>
+
+          <!-- Highlight Story Box -->
+          <div class="event-story-box" id="event-story">
+            <p class="story-quote">
+              „Panieński nie musi kończyć się w klubie, może zacząć się w <strong>jacuzzi pod gwiazdami</strong>. 
+              <strong>Sauna, jacuzzi, bania ruska do schłodzenia i ognisko na zewnątrz</strong> to idealne tło na wieczór, 
+              który zapamiętacie na długo. Do tego <strong>catering na miejscu</strong> i możliwość dojazdu na dyskotekę w pobliżu.”
+            </p>
+
+            <div class="chips-row">
+              <span class="event-chip">✨ Jacuzzi pod gwiazdami</span>
+              <span class="event-chip">🔥 Drewniana sauna i bania ruska</span>
+              <span class="event-chip">🪵 Nocne ognisko na polanie</span>
+              <span class="event-chip">🍽️ Catering dostarczany na miejsce</span>
+              <span class="event-chip">🚗 Wygodny dojazd na dyskotekę</span>
+              <span class="event-chip">🔊 Impreza bez obaw o sąsiadów</span>
+            </div>
+
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+              <a href="#kontakt" class="btn btn-gold" id="panienski-cta-inquire">
+                📩 Zarezerwuj termin na panieński / imprezę
+              </a>
+              <a href="tel:508651559" class="btn btn-night" id="panienski-cta-call">
+                Zadzwoń: 508 651 559
+              </a>
+            </div>
+          </div>
+
+          <!-- 4 Grid Cards Detailing Amenities -->
+          <div class="cards-grid-4">
+            <article class="feature-card" id="card-jacuzzi">
+              <div class="card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              </div>
+              <h3 class="card-title">Jacuzzi pod gwiazdami</h3>
+              <p class="card-text">Gorąca kąpiel z hydromasażem na świeżym powietrzu pod nocnym niebem z kieliszkiem prosecco.</p>
+            </article>
+
+            <article class="feature-card" id="card-sauna">
+              <div class="card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+              </div>
+              <h3 class="card-title">Sauna i bania ruska</h3>
+              <p class="card-text">Prawdziwy relaks i oczyszczenie w klimatycznej saunie oraz lodowata bania ruska do orzeźwienia.</p>
+            </article>
+
+            <article class="feature-card" id="card-catering">
+              <div class="card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>
+              </div>
+              <h3 class="card-title">Catering na miejscu</h3>
+              <p class="card-text">Zadbaj tylko o dobrą zabawę – pyszny poczęstunek i przekąski przygotowane dla Waszej grupy.</p>
+            </article>
+
+            <article class="feature-card" id="card-party">
+              <div class="card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+              </div>
+              <h3 class="card-title">Dojazd na dyskotekę</h3>
+              <p class="card-text">Chcecie przedłużyć noc w klubowych rytmach? Zapewniamy wygodny transport do pobliskich lokali.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- 4. SPONTANICZNY WYJAZD & RABAT -->
+      <section class="section-py" id="na-weekend">
+        <div class="container">
+          <div class="center-header">
+            <div class="section-badge">Reset w naturze</div>
+            <h2 class="section-title">Spontaniczny <span>wyjazd</span></h2>
+            <p class="section-desc">Ucieknij z miasta w ciszę lasów, rzeki i wieczornego ciepła balii.</p>
+          </div>
+
+          <!-- Highlighted Discount Banner Box -->
+          <div class="discount-card" id="discount-promo-box">
+            <div class="discount-info-col">
+              <div class="discount-badge-lg">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                Specjalna Oferta: -20%
+              </div>
+              <p class="discount-text">
+                „Najlepsze wspomnienia rzadko powstają z okazji, częściej z nudy w piątkowy wieczór. 
+                Las, łąki, rzeka Liwiec w pobliżu i spływy kajakowe w zasięgu ręki, a wieczorem ognisko i jacuzzi. 
+                <strong>Od poniedziałku do czwartku wynajem tańszy o 20%.</strong>”
+              </p>
+              <div class="discount-highlight-price">
+                -20% TANIEJ
+                <small>na rezerwacje od poniedziałku do czwartku</small>
+              </div>
+            </div>
+
+            <div class="discount-action-col">
+              <a href="#kontakt" class="btn btn-gold" id="discount-cta-button">
+                📩 Zarezerwuj z rabatem 20%
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- 5. IDEALNE NA KAŻDĄ OKAZJĘ / O NAS -->
+      <section class="section-py" id="o-nas">
+        <div class="container">
+          <div class="center-header">
+            <div class="section-badge">Pełna prywatność & swoboda</div>
+            <h2 class="section-title">Idealne na <span>każdą okazję</span></h2>
+            <p class="section-desc">
+              Nasza posiadłość to olbrzymia, 3-hektarowa działka otoczona lasami, gdzie nikt Wam nie przeszkadza.
+              Ognisko pod rozgwieżdżonym niebem, gorące jacuzzi, sauna i komfortowy, w pełni wyposażony dom tworzą doskonałą bazę
+              zarówno na szaloną imprezę, jak i głęboki relaks z bliskimi.
+            </p>
+          </div>
+
+          <div class="cards-grid-4">
+            <article class="feature-card" id="occasion-bachelor">
+              <div class="card-icon">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5.8 11.3 2 22l10.7-3.79"/><path d="M4 3h.01"/><path d="M22 8h.01"/><path d="M15 2h.01"/><path d="M22 20h.01"/><path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12v0c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10.5"/></svg>
+              </div>
+              <h3 class="card-title">Kawalerski & Panieński</h3>
+              <p class="card-text">Brak sąsiadów zza ściany, potężna działka, głośna muzyka, jacuzzi i ognisko aż do wschodu słońca.</p>
+            </article>
+
+            <article class="feature-card" id="occasion-birthday">
+              <div class="card-icon">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/><path d="M2 21h20"/><path d="M7 8v3"/><path d="M12 8v3"/><path d="M17 8v3"/><path d="M7 4h.01"/><path d="M12 4h.01"/><path d="M17 4h.01"/></svg>
+              </div>
+              <h3 class="card-title">Urodziny & Jubileusze</h3>
+              <p class="card-text">Okrągłe 18-tki, 30-tki, 40-tki czy rocznice. Przestronny dom z miejscem na tańce, ucztę i relaks.</p>
+            </article>
+
+            <article class="feature-card" id="occasion-friends">
+              <div class="card-icon">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <h3 class="card-title">Spotkania ze znajomymi</h3>
+              <p class="card-text">Wypad większą paczką: gry plenerowe, grillowanie, spływy kajakowe na Liwcu i nocne rozmowy przy ognisku.</p>
+            </article>
+
+            <article class="feature-card" id="occasion-integration">
+              <div class="card-icon">
+                <svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/><path d="m4.93 4.93 14.14 14.14M4.93 19.07 19.07 4.93"/></svg>
+              </div>
+              <h3 class="card-title">Integracje & Imprezy</h3>
+              <p class="card-text">Firmowe i okolicznościowe spotkania w nieformalnej atmosferze – strefa wellness, potężny ogród i swoboda.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- NOWA SEKCJA: STREFY SIEDLISKA (Informacje przeniesione z galerii w czytelną osobną sekcję) -->
+      <section class="section-py" id="strefy-obiektu">
+        <div class="container">
+          <div class="center-header">
+            <div class="section-badge">Przestrzeń & Udogodnienia</div>
+            <h2 class="section-title">Poznaj <span>Strefy Siedliska</span></h2>
+            <p class="section-desc">
+              Każdy zakątek naszej 3-hektarowej posiadłości został przygotowany tak, by zapewnić Wam maksimum komfortu, zabawy i prywatności.
+            </p>
+          </div>
+
+          <div class="cards-grid-4">
+            <article class="feature-card" id="strefa-dom-rekreacja">
+              <div class="card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <h3 class="card-title">Dom i strefa rekreacyjna</h3>
+              <p class="card-text">3-hektarowa działka otoczona lasami, gwarantująca pełną dyskrecję, świeże powietrze i nieskrępowaną swobodę.</p>
+            </article>
+
+            <article class="feature-card" id="strefa-wyposazenie-domu">
+              <div class="card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg>
+              </div>
+              <h3 class="card-title">W pełni wyposażony dom</h3>
+              <p class="card-text">Komfortowe sypialnie z wygodnymi łóżkami, duży salon imprezowy i w pełni zaopatrzona kuchnia z wyposażeniem.</p>
+            </article>
+
+            <article class="feature-card" id="strefa-spa-wellness">
+              <div class="card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              </div>
+              <h3 class="card-title">Strefa SPA & Wellness</h3>
+              <p class="card-text">Drewniana sauna fińska, orzeźwiająca bania ruska do schłodzenia oraz gorąca balia / jacuzzi pod rozgwieżdżonym niebem.</p>
+            </article>
+
+            <article class="feature-card" id="strefa-teren-ognisko">
+              <div class="card-icon">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+              </div>
+              <h3 class="card-title">Teren na imprezy i ognisko</h3>
+              <p class="card-text">Nielimitowana swoboda, otwarta przestrzeń pod nocne ognisko z pieczeniem kiełbasek, muzyką i nocnym niebem.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- 6. GALERIA (CZYSTE ZDJĘCIA, HOVER ZOOM BEZ PODPISÓW NA ZDJĘCIACH) -->
+      <section class="section-py" id="galeria">
+        <div class="container">
+          <div class="center-header">
+            <div class="section-badge">Zdjęcia siedliska</div>
+            <h2 class="section-title">Galeria <span>posiadłości</span></h2>
+            <p class="section-desc">Zobacz klimat Siedliska Żuków na fotografiach z naszej posiadłości.</p>
+          </div>
+
+          <div class="gallery-grid">
+            <div class="gallery-item" id="gallery-photo-1">
+              <img 
+                src="https://i.ibb.co/R4MhXzdG/796853526-122112368889434760-1704221418688455572-n.jpg" 
+                alt="Siedlisko Żuków - Dom i strefa rekreacyjna na 3-hektarowej działce" 
+                loading="lazy" 
+                decoding="async"
+                width="800"
+                height="500"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+
+            <div class="gallery-item" id="gallery-photo-2">
+              <img 
+                src="https://i.ibb.co/hxhZP3Jz/798744016-122112874815434760-9151546133826891075-n.jpg" 
+                alt="Siedlisko Żuków - Nowoczesne i klimatyczne wnętrza domu eventowego" 
+                loading="lazy" 
+                decoding="async"
+                width="800"
+                height="500"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+
+            <div class="gallery-item" id="gallery-photo-3">
+              <img 
+                src="https://i.ibb.co/QvzX7g2T/799149823-122112875151434760-3677591606640406661-n.jpg" 
+                alt="Siedlisko Żuków - Drewniana sauna oraz bania ruska" 
+                loading="lazy" 
+                decoding="async"
+                width="800"
+                height="500"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+
+            <div class="gallery-item" id="gallery-photo-4">
+              <img 
+                src="https://i.ibb.co/LD2GmhYz/798276278-122112875193434760-2915450474577562103-n.jpg" 
+                alt="Siedlisko Żuków - Posiadłość i ogród na imprezy plenerowe" 
+                loading="lazy" 
+                decoding="async"
+                width="800"
+                height="500"
+                referrerpolicy="no-referrer"
+              />
+            </div>
+          </div>
+
+          <div style="text-align: center; margin-top: 36px;">
+            <a href="#kontakt" class="btn btn-gold" id="gallery-cta-inquire">
+              📩 Zapytaj o termin i poznaj szczegóły
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="section-divider"></div>
+
+      <!-- 7. KONTAKT I MAPA GOOGLE -->
+      <section class="section-py" id="kontakt">
+        <div class="container">
+          <div class="center-header">
+            <div class="section-badge">Rezerwacje & kontakt</div>
+            <h2 class="section-title">Skontaktuj się <span>z nami</span></h2>
+            <p class="section-desc">
+              Chcesz sprawdzić wolny termin, dopytać o catering lub zarezerwować dom na imprezę? 
+              Zadzwoń do nas lub napisz – z przyjemnością odpowiemy na wszystkie pytania!
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <!-- Left Info Panel -->
+            <div class="contact-info-panel" id="contact-details-box">
+              <div>
+                <h3 style="font-family: var(--font-serif); font-size: 23px; color: var(--gold-primary); margin-bottom: 22px;">
+                  Siedlisko Żuków
+                </h3>
+
+                <div class="contact-methods">
+                  <!-- Adres -->
+                  <div class="contact-card-item">
+                    <div class="contact-icon">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <div>
+                      <div class="contact-label">Lokalizacja</div>
+                      <div class="contact-val">Żuków 4A, 08-124 Mokobody</div>
+                    </div>
+                  </div>
+
+                  <!-- Telefon -->
+                  <div class="contact-card-item">
+                    <div class="contact-icon">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <div>
+                      <div class="contact-label">Telefon rezerwacyjny</div>
+                      <div class="contact-val">
+                        <a href="tel:508651559" id="link-phone-direct">508 651 559</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- E-mail -->
+                  <div class="contact-card-item">
+                    <div class="contact-icon">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </div>
+                    <div>
+                      <div class="contact-label">Adres e-mail</div>
+                      <div class="contact-val">
+                        <a href="mailto:martal21873766@op.pl" id="link-email-direct">martal21873766@op.pl</a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Facebook z ikoną -->
+                  <div class="contact-card-item">
+                    <div class="contact-icon" style="color: #60a5fa;">
+                      <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                    </div>
+                    <div>
+                      <div class="contact-label">Nasz profil Facebook</div>
+                      <div class="contact-val">
+                        <a href="https://www.facebook.com/profile.php?id=61593042818010" target="_blank" rel="noopener noreferrer" id="link-facebook-direct">
+                          fb.com/SiedliskoŻuków ↗
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick CTA Buttons -->
+              <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 6px;">
+                <a href="tel:508651559" class="btn btn-gold" style="width: 100%;" id="contact-box-call">
+                  📞 Zadzwoń teraz: 508 651 559
+                </a>
+                <a href="mailto:martal21873766@op.pl?subject=Zapytanie%20o%20rezerwacje%20-%20Siedlisko%20Zukow" class="btn btn-night" style="width: 100%;" id="contact-box-mail">
+                  📩 Napisz e-mail z zapytaniem
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Responsive Map Iframe -->
+            <div class="map-container" id="google-map-wrapper">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.662423994586!2d22.11708321267519!3d52.23135065744282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471f441753ed286b%3A0xbd803877932c1acb!2zxbt1a8OzdyA0QSwgMDgtMTI0!5e0!3m2!1spl!2spl!4v1789819531581!5m2!1spl!2spl" 
+                width="600" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="strict-origin-when-cross-origin"
+                title="Mapa dojazdu do Siedliska Żuków">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 8. FOOTER -->
+    <footer class="site-footer" id="stopka">
+      <div class="container footer-inner">
+        <!-- Logo -->
+        <a href="#hero" class="site-logo">
+          <div class="logo-icon-wrap" style="width: 36px; height: 36px;">
+            <img 
+              src="https://i.ibb.co/0TSSWhX/770761243-122103355497434760-5720882374382434321-n.jpg" 
+              alt="Logo Siedlisko Żuków" 
+              width="36" 
+              height="36"
+              decoding="async" 
+            />
+          </div>
+          <span class="logo-text" style="font-size: 19px;">Siedlisko <span>Żuków</span></span>
+        </a>
+
+        <!-- Footer Navigation Links -->
+        <ul class="footer-links">
+          <li><a href="#o-nas">O nas</a></li>
+          <li><a href="#na-weekend">Na weekend</a></li>
+          <li><a href="#panienski-kawalerski">Panieński / Kawalerski</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="https://www.facebook.com/profile.php?id=61593042818010" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        </ul>
+
+        <!-- Copyright and Address -->
+        <div class="footer-copy">
+          <div>
+            Adres: <strong>Żuków 4A, 08-124 Mokobody</strong> | Tel: <a href="tel:508651559" style="color: var(--gold-light);">508 651 559</a>
+          </div>
+          <div>
+            © 2026 Siedlisko Żuków. Wszelkie prawa zastrzeżone.
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
