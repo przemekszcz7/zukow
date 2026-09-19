@@ -7,20 +7,19 @@
     <meta name="description" content="Klimatyczny imprezowy dom eventowy na 3-hektarowej działce z sauną, jacuzzi pod gwiazdami i ruską banią w Żukowie koło Mokobód. Panieńskie, kawalerskie, urodziny i weekendy." />
     
     <!-- Favicon -->
-    <link rel="icon" type="image/jpeg" href="https://i.ibb.co/0TSSWhX/770761243-122103355497434760-5720882374382434321-n.jpg" />
+    <link rel="icon" type="image/jpeg" href="/images/logo.jpg" />
     
-    <!-- Preconnect & DNS-Prefetch for Speed -->
-    <link rel="preconnect" href="https://i.ibb.co" crossorigin />
-    <link rel="dns-prefetch" href="https://i.ibb.co" />
+    <!-- Preconnect for Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preload" as="image" href="https://i.ibb.co/R4MhXzdG/796853526-122112368889434760-1704221418688455572-n.jpg" fetchpriority="high" />
+    <!-- High-priority preload of local Hero image (WebP) -->
+    <link rel="preload" as="image" href="/images/hero-dom.webp" type="image/webp" fetchpriority="high" />
 
     <!-- Open Graph / SEO -->
     <meta property="og:title" content="Siedlisko Żuków | Imprezowy Dom Eventowy" />
     <meta property="og:description" content="Sauna, jacuzzi i w pełni wyposażony dom na 3-hektarowej działce. Idealne miejsce na panieński, kawalerski i imprezy ze znajomymi." />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://i.ibb.co/R4MhXzdG/796853526-122112368889434760-1704221418688455572-n.jpg" />
+    <meta property="og:image" content="/images/hero-dom.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Google Fonts with swap display -->
@@ -351,7 +350,11 @@
         display: flex;
         align-items: center;
         padding: 70px 0 90px;
-        background-image: url('https://i.ibb.co/R4MhXzdG/796853526-122112368889434760-1704221418688455572-n.jpg');
+        background-image: url('/images/hero-dom.jpg');
+        background-image: image-set(
+          url('/images/hero-dom.webp') type('image/webp'),
+          url('/images/hero-dom.jpg') type('image/jpeg')
+        );
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
@@ -930,13 +933,16 @@
         <!-- Logo -->
         <a href="#hero" class="site-logo" id="logo-link">
           <div class="logo-icon-wrap">
-            <img 
-              src="https://i.ibb.co/0TSSWhX/770761243-122103355497434760-5720882374382434321-n.jpg" 
-              alt="Logo Siedlisko Żuków" 
-              width="42" 
-              height="42"
-              decoding="async" 
-            />
+            <picture>
+              <source srcset="/images/logo.webp" type="image/webp" />
+              <img 
+                src="/images/logo.jpg" 
+                alt="Logo Siedlisko Żuków" 
+                width="42" 
+                height="42"
+                decoding="async" 
+              />
+            </picture>
           </div>
           <span class="logo-text">Siedlisko <span>Żuków</span></span>
         </a>
@@ -1238,51 +1244,59 @@
 
           <div class="gallery-grid">
             <div class="gallery-item" id="gallery-photo-1">
-              <img 
-                src="https://i.ibb.co/R4MhXzdG/796853526-122112368889434760-1704221418688455572-n.jpg" 
-                alt="Siedlisko Żuków - Dom i strefa rekreacyjna na 3-hektarowej działce" 
-                loading="lazy" 
-                decoding="async"
-                width="800"
-                height="500"
-                referrerpolicy="no-referrer"
-              />
+              <picture>
+                <source srcset="/images/hero-dom.webp" type="image/webp" />
+                <img 
+                  src="/images/hero-dom.jpg" 
+                  alt="Siedlisko Żuków - Dom i strefa rekreacyjna na 3-hektarowej działce" 
+                  loading="lazy" 
+                  decoding="async"
+                  width="800"
+                  height="500"
+                />
+              </picture>
             </div>
 
             <div class="gallery-item" id="gallery-photo-2">
-              <img 
-                src="https://i.ibb.co/hxhZP3Jz/798744016-122112874815434760-9151546133826891075-n.jpg" 
-                alt="Siedlisko Żuków - Nowoczesne i klimatyczne wnętrza domu eventowego" 
-                loading="lazy" 
-                decoding="async"
-                width="800"
-                height="500"
-                referrerpolicy="no-referrer"
-              />
+              <picture>
+                <source srcset="/images/wnetrza.webp" type="image/webp" />
+                <img 
+                  src="/images/wnetrza.jpg" 
+                  alt="Siedlisko Żuków - Nowoczesne i klimatyczne wnętrza domu eventowego" 
+                  loading="lazy" 
+                  decoding="async"
+                  width="800"
+                  height="500"
+                />
+              </picture>
             </div>
 
             <div class="gallery-item" id="gallery-photo-3">
-              <img 
-                src="https://i.ibb.co/QvzX7g2T/799149823-122112875151434760-3677591606640406661-n.jpg" 
-                alt="Siedlisko Żuków - Drewniana sauna oraz bania ruska" 
-                loading="lazy" 
-                decoding="async"
-                width="800"
-                height="500"
-                referrerpolicy="no-referrer"
-              />
+              <picture>
+                <source srcset="/images/sauna.webp" type="image/webp" />
+                <img 
+                  src="/images/sauna.jpg" 
+                  alt="Siedlisko Żuków - Drewniana sauna oraz bania ruska" 
+                  loading="lazy" 
+                  decoding="async"
+                  width="800"
+                  height="500"
+                />
+              </picture>
             </div>
 
             <div class="gallery-item" id="gallery-photo-4">
-              <img 
-                src="https://i.ibb.co/LD2GmhYz/798276278-122112875193434760-2915450474577562103-n.jpg" 
-                alt="Siedlisko Żuków - Posiadłość i ogród na imprezy plenerowe" 
-                loading="lazy" 
-                decoding="async"
-                width="800"
-                height="500"
-                referrerpolicy="no-referrer"
-              />
+              <picture>
+                <source srcset="/images/ogrod.webp" type="image/webp" />
+                <img 
+                  src="/images/ogrod.jpg" 
+                  alt="Siedlisko Żuków - Posiadłość i ogród na imprezy plenerowe" 
+                  loading="lazy" 
+                  decoding="async"
+                  width="800"
+                  height="500"
+                />
+              </picture>
             </div>
           </div>
 
@@ -1406,13 +1420,16 @@
         <!-- Logo -->
         <a href="#hero" class="site-logo">
           <div class="logo-icon-wrap" style="width: 36px; height: 36px;">
-            <img 
-              src="https://i.ibb.co/0TSSWhX/770761243-122103355497434760-5720882374382434321-n.jpg" 
-              alt="Logo Siedlisko Żuków" 
-              width="36" 
-              height="36"
-              decoding="async" 
-            />
+            <picture>
+              <source srcset="/images/logo.webp" type="image/webp" />
+              <img 
+                src="/images/logo.jpg" 
+                alt="Logo Siedlisko Żuków" 
+                width="36" 
+                height="36"
+                decoding="async" 
+              />
+            </picture>
           </div>
           <span class="logo-text" style="font-size: 19px;">Siedlisko <span>Żuków</span></span>
         </a>
